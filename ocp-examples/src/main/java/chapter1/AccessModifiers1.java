@@ -7,7 +7,7 @@ public class AccessModifiers1 {
 		classInsideMain.packageField = "";
 		classInsideMain.protectedField = "";
 		classInsideMain.publicField = "";
-		classInsideMain.privateField = ""; // FAILS
+		//TODO classInsideMain.privateField = ""; // FAILS
 	}
 
 }
