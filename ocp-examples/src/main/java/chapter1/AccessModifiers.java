@@ -1,6 +1,6 @@
 package chapter1;
 
-public class AccessModifiers1 {
+public class AccessModifiers {
 
 	public static void main(String[] args) {
 		ClassInsideMain classInsideMain = new ClassInsideMain();

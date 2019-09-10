@@ -7,6 +7,9 @@ public class CatAdmirer {
 		System.out.println(cat.name);
 		System.out.println(cat.hasFur);
 		System.out.println(cat.hasPaws);
-//		System.out.println(cat.id);
+		
+		//FIXME Compiler Error:The field BigCat.id is not visible
+		//System.out.println(cat.id); 
+		
 	}
 }
