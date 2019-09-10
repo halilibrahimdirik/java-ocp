@@ -1,6 +1,6 @@
 package chapter3;
 
-import chapter1.cat.BigCat;
+import chapter1.accessModifiers.cat.BigCat;
 
 public class Crate<T> {
 

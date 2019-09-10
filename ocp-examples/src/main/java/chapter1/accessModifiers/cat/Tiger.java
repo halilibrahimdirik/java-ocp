@@ -1,15 +1,13 @@
-package chapter1.cat;
-
-import chapter1.cat.BigCat;
+package chapter1.accessModifiers.cat;
 
 public class Tiger extends BigCat {
 
 	public static void main(String[] args) {
 		BigCat cat = new BigCat();
 		System.out.println(cat.name);
-		 System.out.println(cat.hasFur);
-		 System.out.println(cat.hasPaws);
-//		 System.out.println(cat.id);
+		System.out.println(cat.hasFur);
+		System.out.println(cat.hasPaws);
+		// System.out.println(cat.id);
 
 		Tiger lynx = new Tiger();
 		System.out.println(lynx.name);
@@ -17,6 +15,6 @@ public class Tiger extends BigCat {
 		System.out.println(lynx.hasPaws);
 
 		// FIXME Compiler Error:The field BigCat.id is not visible
-//		 System.out.println(lynx.id);
+		// System.out.println(lynx.id);
 	}
 }

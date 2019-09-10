@@ -1,6 +1,6 @@
-package chapter1.cat.species;
+package chapter1.accessModifiers.cat.species;
 
-import chapter1.cat.BigCat;
+import chapter1.accessModifiers.cat.BigCat;
 
 public class Lynx extends BigCat {
 

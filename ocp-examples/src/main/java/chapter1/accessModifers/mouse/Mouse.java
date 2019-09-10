@@ -1,6 +1,6 @@
-package chapter1.mouse;
+package chapter1.accessModifers.mouse;
 
-import chapter1.cat.BigCat;
+import chapter1.accessModifiers.cat.BigCat;
 
 public class Mouse {
 

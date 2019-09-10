@@ -1,4 +1,4 @@
-package chapter1.cat;
+package chapter1.accessModifiers.cat;
 
 public class BigCat {
 
