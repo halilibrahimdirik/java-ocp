@@ -1,5 +1,7 @@
 package chapter3;
 
+import java.util.ArrayList;
+
 import chapter1.accessModifiers.cat.BigCat;
 
 public class Crate<T> {
@@ -20,6 +22,8 @@ public class Crate<T> {
 		Crate<BigCat> genericsSample = new Crate<>();
 		genericsSample.packCrate(bigCat);
 		BigCat inNewHome = genericsSample.emptyCrate();
+		ArrayList<String> arrayList=new ArrayList<>();
+		arrayList.addAll(null);
 	}
 
 }
