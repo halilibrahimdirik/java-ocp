@@ -14,10 +14,11 @@ public class FindMatchingAnimals {
 		CheckTrait trait3 = a -> {
 			return a.canHop();
 		};
+		CheckTrait trait4 = (Animal a) -> a.canHop();
 		print(new Animal("fish", false, true), trait1);
 		print(new Animal("kangaroo", true, false), a -> a.canHop());
 
-		CheckTraitWithNoParam trait4 = () -> true;
+		CheckTraitWithNoParam trait5 = () -> true;
 		
 
 	}
