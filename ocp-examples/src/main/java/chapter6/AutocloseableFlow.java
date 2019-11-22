@@ -5,16 +5,17 @@ import java.sql.SQLException;
 
 public class AutocloseableFlow {
 	static class Door implements AutoCloseable {
-		public void close() {
+		public void close() throws Exception {
 			System.out.print("D");
+			throw new Exception();
 		}
 	}
 
 	static class Window implements Closeable {
-		public void close() {
+		public void close() throws Exception {
 			System.out.print("W");
-			throw new RuntimeException();
-//			throw new IOException();
+	//		throw new RuntimeException();
+        	throw new Exception();
 //			throw new SQLException();
 		}
 	}

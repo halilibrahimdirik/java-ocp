@@ -1,20 +1,81 @@
 1 C
-2 A, B, C, F
+2 A, B, C, F --> B,C
 3 E
 4 A,B
 5 C
 6 G
 7 C
 8 B, C
-9 A
-10 A, D, E
-11 B, E
-12 A, C, D, E
-13 F
+9 A --> A,D
+10 A, D, E --> A, E
+11 B, E -->B, D, E
+12 A, C, D, E --> A,D,E
+13 F  --> a
 14 F
-15 B, E, 
-16
-17
-18
-19
-20
+15 B, E 
+16 B --> c
+17 A, B
+18 B
+19 B, C, -->d 
+20 E
+
+1. C. The method should declare that it throws an exception and the body of the method
+actually would throw it. Options E and F are incorrect because both checked and
+unchecked (runtime) exceptions can be declared in a method signature. Also, option F is
+incorrect because SQLException is a checked exception.
+2. B, C. Option A is incorrect because it will move the compilation error to the close() method
+since it does throw an exception that must be handled or declared. Option B is correct
+because the unhandled exception becomes declared. Option C is correct because the exception becomes handled. Option D is incorrect because the exception remains unhandled.
+3. E. Options B, D, and F are incorrect because only one variable name is allowed in a
+multi-catch block. Option A is incorrect because FileNotFoundException is a subclass
+of IOException. A multi-catch statement does not allow redundancy, and just catching
+IOException would have been equivalent. Option C is incorrect because the IOException
+that is thrown is not handled.
+4. A, B. A try-with-resources statement does not require a catch or finally block. A traditional try statement requires at least one of the two.
+5. C. After opening both resources in the try-with-resources statement, T is printed. Then the
+try-with-resource completes and closes the resources in reverse order from which they were
+opened. After W is printed, an exception is thrown. However, the remaining resource is still
+closed and D is printed. The exception thrown is then caught and E is printed. Last, the
+finally block is run, printing F. Therefore the answer is TWDEF.
+6. G. A try-with-resources statement uses parentheses rather than brackets for the try section.
+This is likely subtler than a question that you’ll get on the exam, but it is still important to
+be on alert for details.
+7. C. The code compiles fine, so option E is incorrect. The command line has only two arguments, so args.length is 2 and the if statement is true. However, because assertions are
+not enabled, it does not throw an AssertionError, so option B is incorrect. The println
+attempts to print args[2], which generates an ArrayIndexOutOfBoundsException, so the
+answer is option C.
+8. B, C. Java uses the flags –ea or –enableassertions to turn on assertions. –da or
+–disableassertions turns off assertions. The colon indicates for a specific class. Choice B
+is correct because it turns on assertions for all code. Choice C is correct because it disables
+assertions but then turns them back on for this class.
+9. A, D. An assertion consists of a boolean expression followed by an optional colon and
+message. The boolean expression is allowed to be in parenthesis, but this is not required.
+Therefore A and D are correct.
+10. A, E. Line 5 does not compile because assert is a reserved word making Choice A correct.
+B and C are incorrect because the parenthesis and message are both optional. D is incorrect
+Chapter 7: Concurrency 561
+because assertions should not have side effects. E is correct because checking an argument
+passed from elsewhere in the program is an appropriate use of an assertion.
+11. B, D, E. You need to memorize the contents of Table 6.2 and Table 6.3 before the exam.
+12. A, D, E. Since a single exception type is caught, only the same type of exception or a subclass is allowed to be assigned to the variable in the catch block. Therefore D and E are
+correct. Additionally A is correct because there are no changes to the variable.
+13. A. Since a multi-catch is used, the variable in the catch block is effectively final and cannot
+be reassigned.
+14. F. A multi-catch cannot catch both a superclass and subclass. Notice how similar questions
+can be while testing something that is entirely different.
+15. B, E. A checked exception extends Exception but not RuntimeException. The entire hierarchy counts, so B and E are both correct.
+16. C. The exception inside the try block becomes the primary exception since it is
+thrown first. Then two suppressed exceptions are added to it when trying to close the
+AutoCloseable resources.
+17. A, B. Closeable was the original interface for IO classes. AutoCloseable was added in
+Java 7 along with try-with-resources. Closeable extends AutoCloseable for backward
+compatibility.
+18. B. The main difference between AutoCloseable and Closeable is that AutoCloseable has
+Exception in the signature and Closeable has only IOException in the signature. Since
+IllegalStateException is a runtime exception, it can be thrown by any method.
+19. D. Choice A is allowed because Java 7 and later “translates” Exception in a catch block to
+the correct one. Choices C and E are allowed because they actually catch a SQLException.
+Choice D is not allowed because there is no IOException declared. Choice B is allowed
+because a method does not have to handle an exception if it declares it.
+20. E. You can create checked or unchecked exceptions. The default constructor is used if one is
+not supplied. There is no requirement to implement specific methods.
