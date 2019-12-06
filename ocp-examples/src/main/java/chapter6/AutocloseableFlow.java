@@ -12,10 +12,10 @@ public class AutocloseableFlow {
 	}
 
 	static class Window implements Closeable {
-		public void close() throws Exception {
+		public void close() {
 			System.out.print("W");
 	//		throw new RuntimeException();
-        	throw new Exception();
+//        	throw new Exception();
 //			throw new SQLException();
 		}
 	}
