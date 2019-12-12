@@ -47,6 +47,16 @@ public class LowLevelvsHighLevelStreams_8_5 {
 			BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(fileOutputStream);
 			ObjectOutputStream objectOutputStream = new ObjectOutputStream(bufferedOutputStream);
 			
+			int b;
+			while((b = fileInputStream.read()) != -1) {
+				fileOutputStream.write(b);
+			}
+			
+			byte[] cs = new byte[100];
+			int b1;
+			while((b1 = fileInputStream.read(cs))  != -1) {
+				fileOutputStream.write(b1);
+			}
 			
 		} catch (Exception e) {
 			// TODO: handle exception

@@ -19,7 +19,7 @@ public class WorkingWithAFileObject_8_3 {
 		// TODO Uncomment System.out.println(file1.renameTo(file2));
 		// TODO Uncomment System.out.println(file1.mkdir());
 		// TODO Uncomment System.out.println(file1.mkdirs());
-		System.out.println(file1.getParent());
+		System.out.println("getParent():" + file1.getParent());
 		File directory1 = new File("/home/hidirik/Desktop");
 		File[] listFiles = directory1.listFiles();
 		System.out.println(listFiles[0].getName());

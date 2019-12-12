@@ -11,6 +11,10 @@ public class Animal {
 		canSwim = swimmer;
 	}
 
+	public Animal(String speciesName, int i, char c) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public boolean canHop() {
 		return canHop;
 	}
