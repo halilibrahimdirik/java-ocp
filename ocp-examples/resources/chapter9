@@ -1,24 +1,24 @@
-1 E
+1 E --> f
 2 B, C 
-3 A -->
-4 C--> 
-5 B --> B, D, E
-6 A, B,E --> A,E
-7 D
-8 A,B, -->A
-9 A,
-10 C, F
-11 B,C,G --> C, E, G
-12 B --> B, C.
-13 A,C,E
-14 E
-15 A
-16 D
-17 A, C, D, G -->  A, B, D, G
-18 A,B,C,F --> B, D, E
-19 B,C,D
-20 B,C,E --> A, C
-21 A,B,C,E --> A, C
-22 A -->E 
-23 E -->H
+3 A --> d
+4 C
+5 D --> b,c, d
+6 A -->c
+7 B, C --> f
+8 D ->a
+9 B,C
+10 A,C -->c ,e
+11 A
+12 A,D, F, --> a,f
+13 A -->b
+14 B, C --> e
+15 D, F --> d,e,f
+16 E,F --> f 
+17 E, F,G --> a,g
+18 D 
+19 E, F -->a,c,e 
+20 D -->b
+21
+22
+23
 
