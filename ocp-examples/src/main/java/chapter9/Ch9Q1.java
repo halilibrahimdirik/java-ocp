@@ -17,11 +17,16 @@ public class Ch9Q1 {
 		System.out.println(relativize);
 
 		Path path3 = Paths.get("/tiger1/hh1/tiger2");
-		Path path4 = Paths.get("/tiger1/hh2/tiger3");
+		Path path4 = Paths.get("/tiger5/hh2/tiger3");
 		Path resolve2 = path3.resolve(path4);
 		System.out.println("resolve2:" + resolve2);
 		Path relativize2 = path3.relativize(path4);
 		System.out.println("relativize2:" + relativize2);
+		
+		Path path31 = Paths.get("E:\\data");
+		Path path41 = Paths.get("E:\\user\\home");
+		Path relativePath1 = path31.relativize(path41);
+		System.out.println(path31.resolve(relativePath1));
 
 	}
 
